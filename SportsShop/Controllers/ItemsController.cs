@@ -56,7 +56,7 @@ namespace SportsShop.Controllers
             {
                 db.Items.Add(item);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction(nameof(List));
             }
 
             return View(item);
@@ -118,7 +118,7 @@ namespace SportsShop.Controllers
             Item item = db.Items.Find(id);
             db.Items.Remove(item);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(List));
         }
 
         protected override void Dispose(bool disposing)

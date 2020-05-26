@@ -16,12 +16,14 @@ namespace SportsShop.Controllers
         private SportsShopDBContext db = new SportsShopDBContext();
 
         // GET: Customers
+        [HttpGet]
         public ActionResult List()
         {
             return View(db.Customers.ToList());
         }
 
         // GET: Customers/Details/5
+        [HttpGet]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace SportsShop.Controllers
         }
 
         // GET: Customers/Create
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
@@ -60,6 +63,7 @@ namespace SportsShop.Controllers
         }
 
         // GET: Customers/Edit/5
+        [HttpGet]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,12 +89,13 @@ namespace SportsShop.Controllers
             {
                 db.Entry(customer).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction(nameof(List));
             }
             return View(customer);
         }
 
         // GET: Customers/Delete/5
+        [HttpGet]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -113,7 +118,7 @@ namespace SportsShop.Controllers
             Customer customer = db.Customers.Find(id);
             db.Customers.Remove(customer);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(List));
         }
 
         protected override void Dispose(bool disposing)
