@@ -168,7 +168,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CitiesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
@@ -253,6 +255,16 @@
     <Content Include="Views\Items\Details.cshtml" />
     <Content Include="Views\Items\Edit.cshtml" />
     <Content Include="Views\Items\List.cshtml" />
+    <Content Include="Views\Cities\Create.cshtml" />
+    <Content Include="Views\Cities\Delete.cshtml" />
+    <Content Include="Views\Cities\Details.cshtml" />
+    <Content Include="Views\Cities\Edit.cshtml" />
+    <Content Include="Views\Cities\List.cshtml" />
+    <Content Include="Views\Departments\Create.cshtml" />
+    <Content Include="Views\Departments\Delete.cshtml" />
+    <Content Include="Views\Departments\Details.cshtml" />
+    <Content Include="Views\Departments\Edit.cshtml" />
+    <Content Include="Views\Departments\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
