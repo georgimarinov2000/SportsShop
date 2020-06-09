@@ -11,6 +11,7 @@ using DataStructure;
 
 namespace SportsShop.Controllers
 {
+    [Authorize]
     public class EmployeesController : Controller
     {
         private SportsShopDBContext db = new SportsShopDBContext();
